@@ -38,7 +38,7 @@
 <feature
       id="org.ietr.preesm.dev.feature"
       label="PREESM Developper Requirements (Meta Feature) - Transitional"
-      version="2.18.0"
+      version="3.0.0"
       provider-name="IETR / INSA Rennes - VAADER">
 
    <description url="http://org/">
