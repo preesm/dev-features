@@ -102,19 +102,6 @@ git clean -xdf
 
 #update version in code and stash changes
 ./releng/update-version.sh $NEW_VERSION
-git stash
-
-# Fix headers
-./releng/fix_header_copyright_and_authors.sh
-# commit fixed headers (if any)
-NBCHANGES=`git status --porcelain | wc -l`
-if [ $NBCHANGES -ne 0 ]; then
-  git add -A
-  git commit -m "[RELENG] Fix headers"
-fi
-
-# make sure integration works before deploying and pushing
-git stash pop
 
 #commit new version in develop
 git add -A
