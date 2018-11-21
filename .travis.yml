@@ -1,0 +1,26 @@
+#######################
+# General Configuration
+#######################
+language: java
+sudo: false
+dist: xenial
+jdk:
+  - openjdk9
+os:
+  - linux
+
+install: true
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+  slack:
+    on_success: change
+    on_failure: change
+    rooms:
+      - vaader-ietr:EEtUq0RrGRpHSXWZiEApSDwS#preesm
+
+script: 
+  - mvn -e -C -U clean package
+

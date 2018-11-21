@@ -46,6 +46,7 @@
 
   
   <feature id="org.ietr.preesm.dev.feature">
+    <category name="dev_components" />
   </feature>
 
   <category-def name="dev_components" label="Developer Resources">
