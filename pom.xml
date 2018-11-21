@@ -1,0 +1,254 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.preesm</groupId>
+  <artifactId>org.preesm.dev-features</artifactId>
+  <version>3.0.0</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>org.ietr.graphiti.dev.feature</module>
+    <module>org.preesm.dev.feature</module>
+    <module>org.ietr.preesm.dev.feature</module>
+    <module>org.preesm.dev-features.site</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <jacoco-version>0.8.1</jacoco-version>
+    <tycho-version>1.2.0</tycho-version>
+    <findbugs-version>3.0.5</findbugs-version>
+    <sonar-version>3.4.1.1168</sonar-version>
+    <checkstyle-version>8.10</checkstyle-version>
+    <rcptt-version>2.3.0</rcptt-version>
+    <preesm.coding.policy.version>1.3.0</preesm.coding.policy.version>
+
+    <!-- XCore related properties  -->
+    <maven.compiler.fork>true</maven.compiler.fork>
+    <emf-version>2.15.0</emf-version>
+    <emf-common-version>2.15.0</emf-common-version>
+    <emf-codegen-version>2.15.0</emf-codegen-version>
+    <xtext-version>2.15.0</xtext-version>
+    <ecore-xtext-version>1.4.0</ecore-xtext-version>
+    <ecore-xcore-version>1.7.0</ecore-xcore-version>
+    <ecore-xcore-lib-version>1.3.0</ecore-xcore-lib-version>
+
+    <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+    <sonar.jacoco.reportPaths>../../target/jacoco.exec</sonar.jacoco.reportPaths>
+    <sonar.exclusions>**/tests/**, **/releng/**, **/ecore-gen/**</sonar.exclusions>
+
+    <!-- ############### -->
+    <!-- ECLIPSE MIRRORS -->
+    <!-- ############### -->
+    <!-- ## Main (mostly down ...) : -->
+    <!-- http://download.eclipse.org -->
+    <!-- ## Mirrors : -->
+    <!-- http://ftp.fau.de/eclipse/ -->
+    <!-- http://mirror.ibcp.fr/pub/eclipse/ -->
+    <!-- http://ftp.halifax.rwth-aachen.de/eclipse/ -->
+    <!-- http://eclipse.mirror.wearetriple.com/ -->
+    <!-- http://artfiles.org/eclipse.org/ -->
+    <!-- http://mirror.switch.ch/eclipse/ -->
+    <eclipse.mirror>http://mirror.ibcp.fr/pub/eclipse/</eclipse.mirror>
+
+    <!-- ############### -->
+    <!-- P2 REPOS CONFIG -->
+    <!-- ############### -->
+    <updatesite.preesm>http://preesm.insa-rennes.fr/repo/complete/</updatesite.preesm>
+    <updatesite.eclipse>${eclipse.mirror}/releases/photon/</updatesite.eclipse>
+    <updatesite.eclipse.updates>${eclipse.mirror}/eclipse/updates/4.8</updatesite.eclipse.updates>
+    <updatesite.tmf>${eclipse.mirror}/modeling/tmf/xtext/updates/releases/</updatesite.tmf>
+    <updatesite.rcptt>http://download.eclipse.org/rcptt/release/${rcptt-version}/repository/</updatesite.rcptt>
+    <updatesite.checkstyle>https://dl.bintray.com/eclipse-cs/eclipse-cs/8.10.0/</updatesite.checkstyle>
+    <updatesite.sonarlint>http://eclipse.sonarlint.org/</updatesite.sonarlint>
+    <updatesite.m2e.tycho>http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/</updatesite.m2e.tycho>
+    <updatesite.m2e.codequality>https://m2e-code-quality.github.io/m2e-code-quality-p2-site/</updatesite.m2e.codequality>
+    <updatesite.m2e.settings>https://preesm.github.io/m2e-settings/site/</updatesite.m2e.settings>
+
+  </properties>
+
+  <repositories>
+    <!-- Official Maven Central repo hosted in UK -->
+    <repository>
+      <id>UK Central</id>
+      <url>http://uk.maven.org/maven2</url>
+    </repository>
+    <!-- add Eclipse repositories to resolve dependencies -->
+    <repository>
+      <id>Eclipse</id>
+      <layout>p2</layout>
+      <url>${updatesite.eclipse}</url>
+    </repository>
+    <repository>
+      <id>Eclipse Updates</id>
+      <layout>p2</layout>
+      <url>${updatesite.eclipse.updates}</url>
+    </repository>
+    <repository>
+      <id>TMF Repo</id>
+      <layout>p2</layout>
+      <url>${updatesite.tmf}</url>
+    </repository>
+    <repository>
+      <id>Preesm Complete Repo</id>
+      <layout>p2</layout>
+      <url>${updatesite.preesm}</url>
+    </repository>
+    <repository>
+      <id>RCPTT</id>
+      <layout>p2</layout>
+      <url>${updatesite.rcptt}</url>
+    </repository>
+    <repository>
+      <id>Checkstyle</id>
+      <layout>p2</layout>
+      <url>${updatesite.checkstyle}</url>
+    </repository>
+    <repository>
+      <id>Sonarlint</id>
+      <layout>p2</layout>
+      <url>${updatesite.sonarlint}</url>
+    </repository>
+    <repository>
+      <id>Tycho M2E extension</id>
+      <layout>p2</layout>
+      <url>${updatesite.m2e.tycho}</url>
+    </repository>
+    <repository>
+      <id>Checkstyle M2E extension</id>
+      <layout>p2</layout>
+      <url>${updatesite.m2e.codequality}</url>
+    </repository>
+    <repository>
+      <id>Settings M2E extension</id>
+      <layout>p2</layout>
+      <url>${updatesite.m2e.settings}</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>sonatype-public</id>
+      <url>http://repository.sonatype.org/content/groups/sonatype-public-grid</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <!-- Directory plugin to find parent root directory absolute path -->
+      <plugin>
+        <groupId>org.commonjava.maven.plugins</groupId>
+        <artifactId>directory-maven-plugin</artifactId>
+        <version>0.3.1</version>
+        <executions>
+          <execution>
+            <id>directories</id>
+            <goals>
+              <goal>highest-basedir</goal>
+            </goals>
+            <phase>initialize</phase>
+            <configuration>
+              <property>main.basedir</property>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <!-- enable tycho build extension -->
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <!-- Configure tycho compiler to ignore user project preferences files
+        generated by Eclipse. -->
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-compiler-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <useProjectSettings>false</useProjectSettings>
+        </configuration>
+      </plugin>
+      <!-- Define supported target platforms -->
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <environments>
+            <!-- Linux -->
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86</arch>
+            </environment>
+            <!-- Win 32 -->
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86</arch>
+            </environment>
+            <!-- Mac -->
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>x86_64</arch>
+            </environment>
+          </environments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.8</version>
+      </plugin>
+      <plugin>
+        <artifactId>exec-maven-plugin</artifactId>
+        <groupId>org.codehaus.mojo</groupId>
+        <version>1.6.0</version>
+      </plugin>
+      <!-- Disable maven deploy plugin: since generated artifacts will be
+        deployed in a P2 repository, there is no need to deploy them in an artifactory/nexus
+        repo. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.2</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
