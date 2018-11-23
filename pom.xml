@@ -57,7 +57,10 @@
     <!-- ############### -->
     <!-- P2 REPOS CONFIG -->
     <!-- ############### -->
-    <updatesite.preesm>http://preesm.insa-rennes.fr/repo/complete/</updatesite.preesm>
+    <updatesite.preesm>http://preesm.insa-rennes.fr/repo/</updatesite.preesm>
+    <updatesite.preesm.externaldeps>${updatesite.preesm}/org.preesm.externaldeps/</updatesite.preesm.externaldeps>
+    <updatesite.preesm.graphiti>${updatesite.preesm}/org.ietr.graphiti/</updatesite.preesm.graphiti>
+    
     <updatesite.eclipse>${eclipse.mirror}/releases/photon/</updatesite.eclipse>
     <updatesite.eclipse.updates>${eclipse.mirror}/eclipse/updates/4.8</updatesite.eclipse.updates>
     <updatesite.tmf>${eclipse.mirror}/modeling/tmf/xtext/updates/releases/</updatesite.tmf>
@@ -67,7 +70,6 @@
     <updatesite.m2e.tycho>http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/</updatesite.m2e.tycho>
     <updatesite.m2e.codequality>https://m2e-code-quality.github.io/m2e-code-quality-p2-site/</updatesite.m2e.codequality>
     <updatesite.m2e.settings>https://preesm.github.io/m2e-settings/site/</updatesite.m2e.settings>
-
   </properties>
 
   <repositories>
@@ -93,9 +95,14 @@
       <url>${updatesite.tmf}</url>
     </repository>
     <repository>
-      <id>Preesm Complete Repo</id>
+      <id>Preesm External Dependencies Repo</id>
       <layout>p2</layout>
-      <url>${updatesite.preesm}</url>
+      <url>${updatesite.preesm.externaldeps}</url>
+    </repository>
+    <repository>
+      <id>Graphiti Repo</id>
+      <layout>p2</layout>
+      <url>${updatesite.preesm.graphiti}</url>
     </repository>
     <repository>
       <id>RCPTT</id>
