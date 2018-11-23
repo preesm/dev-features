@@ -142,6 +142,22 @@
               <goal>sftp-transfert</goal>
             </goals>
           </execution>
+         <execution>
+            <id>upload-composite</id>
+            <phase>deploy</phase>
+            <configuration>
+               <serverId>preesm-insa-rennes</serverId>
+               <serverHost>preesm.insa-rennes.fr</serverHost>
+               <serverPort>8022</serverPort>
+               <strictHostKeyChecking>false</strictHostKeyChecking>
+               <mode>send</mode>
+               <localPath>${project.build.directory}/composite/</localPath>
+               <remotePath>/repo/${project.groupId}/</remotePath>
+            </configuration>
+            <goals>
+               <goal>sftp-transfert</goal>
+            </goals>
+         </execution>
         </executions>
       </plugin>
     </plugins>
