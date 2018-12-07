@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.preesm.dev</groupId>
   <artifactId>org.preesm.dev-features</artifactId>
-  <version>3.0.2</version>
+  <version>3.0.3</version>
   <packaging>pom</packaging>
   <name>PREESM :: Dev :: Parent</name>
 
@@ -140,12 +140,6 @@
     <pluginRepository>
       <id>sonatype-public</id>
       <url>http://repository.jboss.org/nexus/content/repositories/releases/</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
     </pluginRepository>
   </pluginRepositories>
 

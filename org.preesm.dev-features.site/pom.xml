@@ -8,14 +8,14 @@
   <parent>
     <groupId>org.preesm.dev</groupId>
     <artifactId>org.preesm.dev-features</artifactId>
-    <version>3.0.2</version>
+    <version>3.0.3</version>
     <relativePath>..</relativePath>
   </parent>
 
    <properties>
       <generate-composite-site.compositeSiteFolder>composite</generate-composite-site.compositeSiteFolder>
       <generate-composite-site.childSites>
-         ${updatesite.preesm}/${project.groupId}/${project.groupId}-${project.version}/
+         ${updatesite.preesm}/${project.groupId}/${project.groupId}-${qualifiedVersion}/
       </generate-composite-site.childSites>
       <generate-composite-site.collectChildrenFromRemoteURL>
          ${updatesite.preesm}/${project.groupId}/
@@ -142,6 +142,22 @@
               <goal>sftp-transfert</goal>
             </goals>
           </execution>
+         <execution>
+            <id>upload-composite</id>
+            <phase>deploy</phase>
+            <configuration>
+               <serverId>preesm-insa-rennes</serverId>
+               <serverHost>preesm.insa-rennes.fr</serverHost>
+               <serverPort>8022</serverPort>
+               <strictHostKeyChecking>false</strictHostKeyChecking>
+               <mode>send</mode>
+               <localPath>${project.build.directory}/composite/</localPath>
+               <remotePath>/repo/${project.groupId}/</remotePath>
+            </configuration>
+            <goals>
+               <goal>sftp-transfert</goal>
+            </goals>
+         </execution>
         </executions>
       </plugin>
     </plugins>

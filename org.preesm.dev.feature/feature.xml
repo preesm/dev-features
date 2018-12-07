@@ -38,7 +38,7 @@
 <feature
       id="org.preesm.dev.feature"
       label="PREESM Developper Requirements (Meta Feature)"
-      version="3.0.2"
+      version="3.0.3"
       provider-name="IETR / INSA Rennes - VAADER">
 
    <description url="http://org/">
@@ -607,7 +607,7 @@ Version 1.0 dated 2006-09-05.]]>
       <import feature="org.eclipse.cdt"/>
 
       <!-- IETR dependencies -->
-      <import feature="org.preesm.externaldeps.thirdparty" version="3.4.1" match="compatible"/>
+      <import feature="org.preesm.externaldeps.thirdparty" version="3.5.0" match="compatible"/>
       <import feature="org.ietr.graphiti.feature" version="1.12.0" match="compatible"/>
       <import feature="org.ietr.graphiti.feature.source"/>
    </requires>
