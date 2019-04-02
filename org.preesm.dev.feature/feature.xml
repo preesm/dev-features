@@ -38,7 +38,7 @@
 <feature
       id="org.preesm.dev.feature"
       label="PREESM Developper Requirements (Meta Feature)"
-      version="3.0.5"
+      version="3.1.0"
       provider-name="IETR / INSA Rennes - VAADER">
 
    <description url="http://org/">
@@ -576,7 +576,7 @@ Version 1.0 dated 2006-09-05.]]>
       <import feature="org.eclipse.sdk"/>
 
       <!-- Modeling capabilities -->
-      <import feature="org.eclipse.xtend.sdk" version="2.15.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.xtend.sdk" version="2.17.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.gef.sdk"/>
       <import feature="org.eclipse.emf.sdk"/>
       <import feature="org.eclipse.emf.ecoretools.sdk"/>
@@ -592,7 +592,7 @@ Version 1.0 dated 2006-09-05.]]>
       <import feature="net.sf.eclipsecs"/>
 
       <!-- m2e (Maven for Eclipse) -->
-      <import feature="org.eclipse.m2e.feature"  version="1.9.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.m2e.feature"  version="1.11.0" match="greaterOrEqual"/>
       <import feature="com.basistech.m2e.code.quality.checkstyle.feature"/>
       <import feature="org.sonatype.tycho.m2e.feature"/>
       <import feature="nl.topicus.m2e.settings.feature" version="2.1.0" match="greaterOrEqual"/>

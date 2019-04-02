@@ -38,7 +38,7 @@
 <feature
       id="org.ietr.graphiti.dev.feature"
       label="Graphiti Developper Requirements (Meta Feature)"
-      version="3.0.5">
+      version="3.1.0">
 
    <description url="http://preesm.org/">
       This feature embeds all required Eclipse plugins for developping Graphiti. That includes XTend, GEF, EMF, Graphiti (Eclipse) Plus SDKs, along with Checkstyle integration for Eclipse, Maven integration for Eclipse (and appropriate extension), and third party libraries.
@@ -580,7 +580,7 @@ Version 1.0 dated 2006-09-05.]]>
       <import feature="org.eclipse.graphiti.sdk.plus.feature"/>
       <import feature="org.eclipse.graphiti.sdk.plus.feature.source"/>
       <!-- Import xtend + xcore in case Preesm source is in the workspace too -->
-      <import feature="org.eclipse.xtend.sdk" version="2.15.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.xtend.sdk" version="2.17.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.emf.ecore.xcore.sdk"/>
 
       <!-- UI Testing -->
@@ -591,7 +591,7 @@ Version 1.0 dated 2006-09-05.]]>
       <import feature="net.sf.eclipsecs"/>
 
       <!-- m2e (Maven for Eclipse) -->
-      <import feature="org.eclipse.m2e.feature" version="1.9.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.m2e.feature" version="1.11.0" match="greaterOrEqual"/>
       <import feature="com.basistech.m2e.code.quality.checkstyle.feature"/>
       <import feature="org.sonatype.tycho.m2e.feature"/>
       <import feature="nl.topicus.m2e.settings.feature" version="2.1.0" match="greaterOrEqual"/>
