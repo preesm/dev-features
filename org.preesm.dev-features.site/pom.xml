@@ -67,6 +67,7 @@
 								<site>${updatesite.eclipse}</site>
 								<site>${updatesite.eclipse.updates}</site>
 								<site>${updatesite.tmf}</site>
+								<site>${updatesite.groovy}</site>
 								<site>${updatesite.rcptt}</site>
 								<site>${updatesite.checkstyle}</site>
 								<site>${updatesite.sonarlint}</site>

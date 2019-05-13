@@ -585,7 +585,7 @@ Version 1.0 dated 2006-09-05.]]>
       <import feature="org.eclipse.emf.ecore.xcore.sdk"/>
 
       <!-- UI Testing -->
-      <import feature="org.eclipse.rcptt.platform"/>
+      <import feature="org.eclipse.rcptt.platform" version="2.4.2" match="greaterOrEqual"/>
 
       <!-- Git & Checkstyle -->
       <import feature="org.eclipse.egit"/>
@@ -605,6 +605,9 @@ Version 1.0 dated 2006-09-05.]]>
 
       <!-- C Editor within Eclipse -->
       <import feature="org.eclipse.cdt"/>
+
+      <!-- Groovy Eclipse -->
+      <!--<import feature="org.codehaus.groovy.eclipse.feature"/>-->
 
       <!-- IETR dependencies -->
       <import feature="org.preesm.externaldeps.thirdparty" version="3.6.0" match="compatible"/>
