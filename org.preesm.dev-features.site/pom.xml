@@ -8,7 +8,7 @@
   <parent>
     <groupId>org.preesm.dev</groupId>
     <artifactId>org.preesm.dev-features</artifactId>
-    <version>3.1.0</version>
+    <version>3.2.0</version>
     <relativePath>..</relativePath>
   </parent>
 
@@ -67,6 +67,7 @@
 								<site>${updatesite.eclipse}</site>
 								<site>${updatesite.eclipse.updates}</site>
 								<site>${updatesite.tmf}</site>
+								<site>${updatesite.groovy}</site>
 								<site>${updatesite.rcptt}</site>
 								<site>${updatesite.checkstyle}</site>
 								<site>${updatesite.sonarlint}</site>

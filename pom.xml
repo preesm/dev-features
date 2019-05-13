@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.preesm.dev</groupId>
   <artifactId>org.preesm.dev-features</artifactId>
-  <version>3.1.0</version>
+  <version>3.2.0</version>
   <packaging>pom</packaging>
   <name>PREESM :: Dev :: Parent</name>
 
@@ -18,7 +18,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <tycho-version>1.3.0</tycho-version>
-    <rcptt-version>2.4.1</rcptt-version>
+    <rcptt-version>2.4.2</rcptt-version>
 
     <!-- ############### -->
     <!-- ECLIPSE MIRRORS -->
@@ -44,6 +44,7 @@
     <updatesite.eclipse>${eclipse.mirror}/releases/2019-03/</updatesite.eclipse>
     <updatesite.eclipse.updates>${eclipse.mirror}/eclipse/updates/4.11</updatesite.eclipse.updates>
     <updatesite.tmf>${eclipse.mirror}/modeling/tmf/xtext/updates/releases/</updatesite.tmf>
+    <!--<updatesite.groovy>https://dist.springsource.org/release/GRECLIPSE/3.3.0/e4.11</updatesite.groovy>-->
     <updatesite.rcptt>${eclipse.mirror}/rcptt/release/${rcptt-version}/repository/</updatesite.rcptt>
     <updatesite.checkstyle>https://dl.bintray.com/eclipse-cs/eclipse-cs/8.18.0/</updatesite.checkstyle>
     <updatesite.sonarlint>http://eclipse.sonarlint.org/</updatesite.sonarlint>
@@ -84,6 +85,13 @@
       <layout>p2</layout>
       <url>${updatesite.preesm.graphiti}</url>
     </repository>
+    <!--
+    <repository>
+      <id>Groovy Repo</id>
+      <layout>p2</layout>
+      <url>${updatesite.groovy}</url>
+    </repository>
+    -->
     <repository>
       <id>RCPTT</id>
       <layout>p2</layout>
