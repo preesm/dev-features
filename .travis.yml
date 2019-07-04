@@ -5,7 +5,7 @@ language: java
 sudo: false
 dist: xenial
 jdk:
-  - openjdk9
+  - openjdk8
 os:
   - linux
 
@@ -22,5 +22,5 @@ notifications:
       - vaader-ietr:EEtUq0RrGRpHSXWZiEApSDwS#preesm
 
 script: 
-  - mvn -e -C -U clean package
+  - mvn -e -c -U clean package
 
