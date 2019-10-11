@@ -18,7 +18,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <tycho-version>1.4.0</tycho-version>
-    <rcptt-version>2.4.2</rcptt-version>
+    <rcptt-version>2.4.3</rcptt-version>
 
 	<!-- ############### -->
 	<!-- ECLIPSE MIRRORS -->
@@ -40,8 +40,8 @@
     <updatesite.preesm.externaldeps>${updatesite.preesm}/org.preesm.externaldeps/</updatesite.preesm.externaldeps>
     <updatesite.preesm.graphiti>${updatesite.preesm}/org.ietr.graphiti/</updatesite.preesm.graphiti>
     
-    <updatesite.eclipse>${eclipse.mirror}/releases/2019-03/</updatesite.eclipse>
-    <updatesite.eclipse.updates>${eclipse.mirror}/eclipse/updates/4.11</updatesite.eclipse.updates>
+    <updatesite.eclipse>${eclipse.mirror}/releases/2019-09/</updatesite.eclipse>
+    <updatesite.eclipse.updates>${eclipse.mirror}/eclipse/updates/4.13</updatesite.eclipse.updates>
     <updatesite.tmf>${eclipse.mirror}/modeling/tmf/xtext/updates/releases/</updatesite.tmf>
     <!--<updatesite.groovy>https://dist.springsource.org/release/GRECLIPSE/3.3.0/e4.11</updatesite.groovy>-->
     <updatesite.rcptt>${eclipse.mirror}/rcptt/release/${rcptt-version}/repository/</updatesite.rcptt>

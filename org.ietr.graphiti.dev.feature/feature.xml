@@ -584,7 +584,7 @@ Version 1.0 dated 2006-09-05.]]>
       <import feature="org.eclipse.emf.ecore.xcore.sdk"/>
 
       <!-- UI Testing -->
-      <import feature="org.eclipse.rcptt.platform" version="2.4.2" match="greaterOrEqual"/>
+      <import feature="org.eclipse.rcptt.platform" version="2.4.3" match="greaterOrEqual"/>
 
       <!-- Git & Checkstyle -->
       <import feature="org.eclipse.egit"/>
