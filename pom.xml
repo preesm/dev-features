@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.preesm.dev</groupId>
   <artifactId>org.preesm.dev-features</artifactId>
-  <version>3.2.2</version>
+  <version>3.2.3</version>
   <packaging>pom</packaging>
   <name>PREESM :: Dev :: Parent</name>
 
@@ -47,7 +47,7 @@
     <updatesite.rcptt>${eclipse.mirror}/rcptt/release/${rcptt-version}/repository/</updatesite.rcptt>
     <updatesite.checkstyle>https://dl.bintray.com/eclipse-cs/eclipse-cs/8.18.0/</updatesite.checkstyle>
     <updatesite.sonarlint>http://eclipse.sonarlint.org/</updatesite.sonarlint>
-    <updatesite.m2e.tycho>http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/</updatesite.m2e.tycho>
+    <updatesite.m2e.tycho>https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/</updatesite.m2e.tycho>
     <updatesite.m2e.codequality>https://m2e-code-quality.github.io/m2e-code-quality-p2-site/</updatesite.m2e.codequality>
     <updatesite.m2e.settings>https://preesm.github.io/m2e-settings/site/</updatesite.m2e.settings>
   </properties>
