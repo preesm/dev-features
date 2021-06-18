@@ -45,7 +45,7 @@
     <updatesite.tmf>${eclipse.mirror}/modeling/tmf/xtext/updates/releases/</updatesite.tmf>
     <!--<updatesite.groovy>https://dist.springsource.org/release/GRECLIPSE/3.3.0/e4.11</updatesite.groovy>-->
     <updatesite.rcptt>${eclipse.mirror}/rcptt/release/${rcptt-version}/repository/</updatesite.rcptt>
-    <updatesite.checkstyle>https://dl.bintray.com/eclipse-cs/eclipse-cs/8.18.0/</updatesite.checkstyle>
+    <updatesite.checkstyle>http://checkstyle.org/eclipse-cs-update-site/</updatesite.checkstyle>
     <updatesite.sonarlint>http://eclipse.sonarlint.org/</updatesite.sonarlint>
     <updatesite.m2e.tycho>https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/N/LATEST/</updatesite.m2e.tycho>
     <updatesite.m2e.codequality>https://m2e-code-quality.github.io/m2e-code-quality-p2-site/</updatesite.m2e.codequality>
