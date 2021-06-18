@@ -15,24 +15,6 @@ fi
 echo "Testing Github permission"
 git ls-remote git@github.com:${REPO}.git > /dev/null
 
-# then test github oauth access token
-echo "Testing Github OAuth token validity"
-if [ ! -e ~/.ghtoken ]; then
-  echo "Error: could not locate '~/.ghtoken' for reading the Github OAuth token"
-  echo "Visit 'https://github.com/settings/tokens/new' and generate a new token with rights on 'repo',"
-  echo "then create the file '~/.ghtoken' with the token value as its only content."
-  exit 1
-fi
-OAUTH_TOKEN=$(cat ~/.ghtoken)
-STATUS=$(curl -s -i -H "Authorization: $OAUTH_TOKEN to" https://api.github.com/repos/${REPO}/releases | grep "^Status:" | cut -d' ' -f 2)
-if [ "$STATUS" != "200" ]; then
-  echo "Error: given token in '~/.ghtoken' is invalid or revoked."
-  echo "  STATUS = $STATUS"
-  echo "Visit 'https://github.com/settings/tokens/new' and generate a new token with rights on 'repo',"
-  echo "then replace the content of '~/.ghtoken' with the token value."
-  exit 1
-fi
-
 # then on SF with maven settings
 TMPDIR=`mktemp -d`
 cat > $TMPDIR/pom.xml << EOF
