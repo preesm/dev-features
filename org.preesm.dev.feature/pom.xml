@@ -8,7 +8,7 @@
   <parent>
     <groupId>org.preesm.dev</groupId>
     <artifactId>org.preesm.dev-features</artifactId>
-    <version>3.2.4</version>
+    <version>3.2.4-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
